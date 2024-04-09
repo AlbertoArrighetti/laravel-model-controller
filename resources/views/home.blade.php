@@ -3,10 +3,10 @@
 @section('content')
 <main>
 
-    <div class="container">
-        <h1>Films</h1>
+    <div class="container py-5">
+        <h1 class="mb-3">Films</h1>
     
-        <div class="row row-cols-3 row-gap-4">
+        <div class="row row-cols-3">
             @foreach ($movies as $movie)
             <div class="card">
                 <div class="card-body">
@@ -16,10 +16,10 @@
                     
                     <div class="card_details">
                     
-                        <ul>
-                            <li class="nationality">{{$movie['nationality']}}</li>
-                            <li class="date">{{$movie['formattedDate']}}</li>
-                            <li class="vote">{{$movie['vote']}}</li>
+                        <ul class="details">
+                            <li class="nationality"><span>Nationality:</span> {{$movie['nationality']}}</li>
+                            <li class="date"><span>Date:</span> {{$movie['formattedDate']}}</li>
+                            <li class="vote"><span>Vote:</span> {{$movie['vote']}}</li>
                         </ul>
                         
                     </div>                   
